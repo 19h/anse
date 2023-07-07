@@ -9,11 +9,10 @@ export const zhCN = {
       save: '保存',
       general: {
         title: '通用',
-        requestWithBackend: '请求代理后端',
         locale: '切换语言',
       },
       openai: {
-        title: 'OpenAI',
+        title: 'EvilCorp SecondPilot',
         key: '',
       },
       replicate: {},

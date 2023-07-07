@@ -36,7 +36,7 @@ export const handleRapidPrompt: Provider['handleRapidPrompt'] = async (
             ...globalSettings,
             model: 'gpt-3.5-turbo',
             temperature: 0.4,
-            maxTokens: 2048,
+            maxTokens: 8100,
             top_p: 1,
             stream: false,
         },
@@ -79,9 +79,6 @@ const handleChatCompletion = async (
     }
 
     const response = await fetchChatCompletion({
-        apiKey: payload.globalSettings.apiKey as string,
-        baseUrl: (payload.globalSettings.baseUrl as string).trim()
-            .replace(/\/$/, ''),
         body: {
             messages,
             max_tokens: maxTokens,

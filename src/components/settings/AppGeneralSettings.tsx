@@ -16,12 +16,6 @@ export default (props: Props) => {
 
   const settingsUIList = () => ([
     {
-      key: 'requestWithBackend',
-      name: t('settings.general.requestWithBackend'),
-      type: 'toggle',
-      default: false,
-    },
-    {
       key: 'locale',
       name: t('settings.general.locale'),
       type: 'select',

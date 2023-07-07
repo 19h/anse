@@ -22,10 +22,12 @@ export default () => {
         {t('settings.title')}
       </header>
       <main class="flex-1 overflow-auto">
-        <AppGeneralSettings
-          settingsValue={() => generalSettings()}
-          updateSettings={updateGeneralSettings}
-        />
+        {
+            /*<AppGeneralSettings
+                settingsValue={() => generalSettings()}
+                updateSettings={updateGeneralSettings}
+            />*/
+        }
         <For each={platformSettingsUIList}>
           {item => (
             <ProviderGlobalSettings
@@ -39,13 +41,7 @@ export default () => {
       <footer class="h-14 fi justify-between px-3">
         <ThemeToggle />
         <div text-xs op-40 px-2>
-          <a href="https://docs.anse.app" target="_blank" rel="noreferrer" class="hv-foreground">
-            Docs
-          </a>
-          <span class="px-1"> · </span>
-          <a href="https://github.com/anse-app/anse" target="_blank" rel="noreferrer" class="hv-foreground">
-            Github
-          </a>
+          get fucked © {(new Date()).getFullYear()}
         </div>
       </footer>
     </div>

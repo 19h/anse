@@ -9,11 +9,10 @@ export const en = {
       save: 'Save',
       general: {
         title: 'General',
-        requestWithBackend: 'Request With Backend',
         locale: 'Change system language',
       },
       openai: {
-        title: 'OpenAI',
+        title: 'EvilCorp SecondPilot',
         key: '',
       },
       replicate: {},

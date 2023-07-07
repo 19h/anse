@@ -7,36 +7,36 @@ import {
 const providerOpenAI = () => {
     const provider: Provider = {
         id: 'provider-openai',
-        icon: 'i-simple-icons-openai', // @unocss-include
-        name: 'OpenAI',
+        icon: 'i-carbon-accessibility', // @unocss-include
+        name: 'EvilCorp SecondPilot',
         globalSettings: [
-            {
-                key: 'apiKey',
-                name: 'API Key',
-                type: 'api-key',
-            },
-            {
-                key: 'baseUrl',
-                name: 'Base URL',
-                description: 'Custom base url for OpenAI API.',
-                type: 'input',
-                default: 'https://api.openai.com',
-            },
-            {
-                key: 'model',
-                name: 'OpenAI model',
-                description: 'Custom gpt model for OpenAI API.',
-                type: 'select',
-                options: [
-                    { value: 'copilot-chat', label: 'copilot-chat' },
-                    { value: 'gpt-3.5-turbo', label: 'gpt-3.5-turbo' },
-                    //{ value: 'claude-v1.3-100k', label: 'claude-v1.3-100k' },
-                    //{ value: 'claude-instant-v1-100k', label: 'claude-instant-v1-100k' },
-                    { value: 'claude-instant-v1-100k', label: 'claude-instant-v1-100k' },
-                    { value: 'airoboros-65b', label: 'airoboros-65b' },
-                ],
-                default: 'copilot-chat',
-            },
+            //{
+            //    key: 'apiKey',
+            //    name: 'API Key',
+            //    type: 'api-key',
+            //},
+            //{
+            //    key: 'baseUrl',
+            //    name: 'Base URL',
+            //    description: 'Custom base url for OpenAI API.',
+            //    type: 'input',
+            //    default: 'https://api.openai.com',
+            //},
+            //{
+            //    key: 'model',
+            //    name: 'OpenAI model',
+            //    description: 'Custom gpt model for OpenAI API.',
+            //    type: 'select',
+            //    options: [
+            //        { value: 'copilot-chat', label: 'copilot-chat' },
+            //        { value: 'gpt-3.5-turbo', label: 'gpt-3.5-turbo' },
+            //        //{ value: 'claude-v1.3-100k', label: 'claude-v1.3-100k' },
+            //        //{ value: 'claude-instant-v1-100k', label: 'claude-instant-v1-100k' },
+            //        { value: 'claude-instant-v1-100k', label: 'claude-instant-v1-100k' },
+            //        { value: 'airoboros-65b', label: 'airoboros-65b' },
+            //    ],
+            //    default: 'copilot-chat',
+            //},
             {
                 key: 'maxTokens',
                 name: 'Max Tokens',
@@ -44,7 +44,7 @@ const providerOpenAI = () => {
                 type: 'slider',
                 min: 0,
                 max: 32768,
-                default: 2048,
+                default: 8100,
                 step: 1,
             },
             {
@@ -91,12 +91,12 @@ const providerOpenAI = () => {
                 name: 'Single Chat',
                 settings: [],
             },
-            {
-                id: 'image_generation',
-                type: 'image_generation',
-                name: 'DALL·E',
-                settings: [],
-            },
+            //{
+            //    id: 'image_generation',
+            //    type: 'image_generation',
+            //    name: 'DALL·E',
+            //    settings: [],
+            //},
         ],
         handlePrompt,
         handleRapidPrompt,

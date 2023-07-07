@@ -1,8 +1,8 @@
 import fs from 'fs';
 
 export interface OpenAIFetchPayload {
-    apiKey: string;
-    baseUrl: string;
+    apiKey?: string;
+    baseUrl?: string;
     body: Record<string, any>;
     signal?: AbortSignal;
 }
@@ -14,7 +14,8 @@ export const fetchChatCompletion = async (payload: OpenAIFetchPayload) => {
             'Authorization': 'token ' + process.env.GH_TOKEN,
             'User-Agent': 'GithubCopilot/1.86.92',
         },
-    });
+        signal: payload.signal,
+    },);
 
     const json = await res.json();
 

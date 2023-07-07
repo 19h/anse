@@ -2,8 +2,6 @@ import type { ConversationType } from './conversation'
 import type { SettingsUI } from './provider'
 
 export interface GeneralSettings {
-  /** Default request directly, can choose to request via proxy */
-  requestWithBackend: boolean
   locale: string
 }
 
